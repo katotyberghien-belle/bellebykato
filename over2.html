@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belle - Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#e8c7d4] text-[#255339] font-sans">
+
+<!-- Navigatie -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+    <!-- Brand: logo + tekst -->
+    <a href="index.html" class="flex items-center gap-3">
+      <img
+        src="logo_wit.png"
+        alt="Belle.by.Kato logo"
+        class="h-10 w-auto object-contain shrink-0"
+      />
+      <span class="text-xl font-bold text-[#255339] leading-none">
+        Belle.by.Kato
+      </span>
+    </a>
+
+    <!-- Desktopmenu -->
+    <ul class="hidden md:flex items-center gap-6">
+      <li><a href="index.html" class="hover:text-pink-700">Home</a></li>
+      <li><a href="over.html" class="hover:text-pink-700">Over mij</a></li>
+      <li><a href="impressie.html" class="hover:text-pink-700">Impressiefoto's</a></li>
+      <li><a href="tarieven.html" class="hover:text-pink-700">Prijslijst</a></li>
+      <li><a href="boeken.html" class="hover:text-pink-700">Online boeken</a></li>
+    </ul>
+
+    <!-- Hamburgerknop (alleen op gsm) -->
+    <button id="menuBtn"
+      class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#255339] hover:bg-[#e8c7d4]/30 focus:outline-none focus:ring-2 focus:ring-[#255339]"
+      aria-controls="mobileMenu" aria-expanded="false">
+      <!-- Open-icoon (3 streepjes) -->
+      <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <!-- Sluit-icoon (X) -->
+      <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      <span class="sr-only">Menu</span>
+    </button>
+  </div>
+
+  <!-- Mobiele dropdown -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-gray-200 bg-white">
+    <ul class="px-4 py-3 space-y-1">
+      <li><a href="index.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Home</a></li>
+      <li><a href="over.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Over mij</a></li>
+      <li><a href="impressie.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Impressiefoto's</a></li>
+      <li><a href="tarieven.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Prijslijst</a></li>
+      <li><a href="boeken.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Online boeken</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Simpele toggle voor het mobiele menu
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  const iconOpen = document.getElementById('iconOpen');
+  const iconClose = document.getElementById('iconClose');
+
+  btn.addEventListener('click', () => {
+    const isHidden = menu.classList.contains('hidden');
+    menu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden', !isHidden);
+    iconClose.classList.toggle('hidden', isHidden);
+    btn.setAttribute('aria-expanded', String(isHidden));
+  });
+
+  // Optioneel: sluit het menu wanneer je buiten klikt
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !btn.contains(e.target) && !menu.classList.contains('hidden')) {
+      menu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+  
+  <header class="bg-white shadow p-6">
+    <h1 class="text-3xl font-bold text-center">Over mij</h1>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+
+
+  <!-- ===== Blok 1 — foto links ===== -->
+  <section class="grid md:grid-cols-[0.4fr_0.6fr] gap-4 items-start">
+    <!-- Foto -->
+    <figure class="overflow-hidden rounded-xl shadow-md bg-white">
+      <img
+        src="overmij.jpg"
+        alt="Kato met boeket bloemen in een kleurrijke tuin"
+        class="w-full h-full object-cover"
+      />
+    </figure>
+
+    <!-- Tekst -->
+    <div class="bg-white/90 rounded-xl shadow-md p-4 md:p-5 text-[#255339]">
+      <h1 class="text-2xl md:text-3xl font-bold text-[#255339] mb-3">Info</h1>
+      <div class="space-y-3 leading-relaxed text-[#255339]/90 text-base">
+        <p>Hallo! Ik ben Kato, 27 jaar en ik woon in Roeselare.</p>
+        <p>Ik werk als opticien-optometrist waar ik mijn technische kennis gebruik om mensen te helpen, iets waar ik veel voldoening uit haal.</p>
+        <p>In mijn vrije tijd ben ik graag creatief bezig. Mensen gelukkig maken, zowel op het werk als daarbuiten, is voor mij echt belangrijk! </p>
+        <p>Hoewel ik soms wat chaotisch kan zijn, streef ik altijd naar perfectie in alles wat ik doe.</p>
+        <p>Die combinatie van creativiteit en oog voor detail was de start van Belle.by.Kato en zie je terug in mijn werk.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Blok 2 — foto rechts (middelste) ===== -->
+  <section class="grid md:grid-cols-[0.6fr_0.4fr] gap-4 items-start">
+    <!-- Tekst -->
+    <div class="bg-white/90 rounded-xl shadow-md p-4 md:p-5 text-[#255339] order-2 md:order-1">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#255339] mb-3">Mijn opleiding</h2>
+      <div class="space-y-3 leading-relaxed text-[#255339]/90 text-base">
+        <p>In september 2024 startte ik met een opleiding basismanicure inclusief gellak, BIAB en gel bij Cosmalis in Roeselare.</p>
+        <p>Omdat ik de smaak wel te pakken had volgde ik aansluitend van oktober tot januari de avondopleiding pedicure aan het CVO Brugge.</p>
+        <p>Om mijn kennis nog wat verder te verdiepen koos ik ervoor om mij tot gespecialiseerd voetverzorger bij te scholen.</p>
+        <p>Deze trajecten vormen samen de basis van mijn passie voor verzorging en kwaliteit. Neem gerust eens een kijkje naar de <a href="impressie.html" class="underline decoration-[#255339]/40 hover:decoration-[#255339]">foto's van mijn werk</a>!</p>
+    </div>
+    </div>
+
+    <!-- Foto -->
+    <figure class="overflow-hidden rounded-xl shadow-md bg-white order-1 md:order-2">
+      <img
+        src="overmij2.jpg"
+        alt="Kato in opleiding"
+        class="w-full h-full object-cover"
+      />
+    </figure>
+  </section>
+
+  <!-- ===== Blok 3 — foto links ===== -->
+  <section class="grid md:grid-cols-[0.4fr_0.6fr] gap-4 items-start">
+    <!-- Foto -->
+    <figure class="overflow-hidden rounded-xl shadow-md bg-white">
+      <img
+        src="overmij3.jpg"
+        alt="Kato in de praktijkruimte"
+        class="w-full h-full object-cover"
+      />
+    </figure>
+
+    <!-- Tekst -->
+    <div class="bg-white/90 rounded-xl shadow-md p-4 md:p-5 text-[#255339]">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#255339] mb-3">De praktijkruimte</h2>
+      <div class="space-y-3 leading-relaxed text-[#255339]/90 text-base">
+        <p>Samen met mijn vriend Lowie kochtten we in de zomer van 2024 ons eerste huis in de Lindenstraat 4 in Roeselare. Een plekje waar rust en creativiteit samenkomen - en waar ik mijn passie voor verzorging verder vorm kan geven.</p>
+        <p>Op de 1e verdieping richtte ik een gezellige maar professionele praktijkruimte in, waar ik met veel zorg manicure- en pedicurebehandelingen aanbied.</p>
+        <p>Een plek waar klanten zich welkom en verzorgd mogen voelen.</p>
+        <p>Interesse? <a href="boeken.html" class="underline decoration-[#255339]/40 hover:decoration-[#255339]">Boek vandaag nog je afspraak online</a>!</p>
+      </div>
+    </div>
+  </section>
+    <!-- ===== Blok 2 — foto rechts (middelste) ===== -->
+  <section class="grid md:grid-cols-[0.6fr_0.4fr] gap-4 items-start">
+    <!-- Tekst -->
+    <div class="bg-white/90 rounded-xl shadow-md p-4 md:p-5 text-[#255339] order-2 md:order-1">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#255339] mb-3">Aan huis</h2>
+      <div class="space-y-3 leading-relaxed text-[#255339]/90 text-base">
+        <p>Naast behandelingen in mijn praktijkruimte, bied ik ook manicure- en pedicurebehandelingen aan bij u thuis. Dit hoofdzakelijk in de omgeving van Roeselare.</p>
+        <p>Deze service is ideaal voor wie liever in eigen comfort verzorgd wordt.</p>
+        <p>Voor een afspraak aan huis kan je mij een berichtje sturen via WhatsApp - online boeken is hiervoor helaas niet mogelijk.</p>
+      </div>
+    </div>
+
+    <!-- Foto -->
+    <figure class="overflow-hidden rounded-xl shadow-md bg-white order-1 md:order-2">
+      <img
+        src="overmij4.jpg"
+        alt="Kato op verplaatsing"
+        class="w-full h-full object-cover"
+      />
+    </figure>
+  </section>
+
+</main>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center p-6 mt-10 text-sm text-gray-700">
+    <p>📍 Lindenstraat 4, 8800 Roeselare | 📞 0483 19 13 28 | ✉️ bellebykato@outlook.be</p>
+  </footer>
+ 
+</body>
+</html>

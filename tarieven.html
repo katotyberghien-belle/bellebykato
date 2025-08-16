@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belle - Impressiefoto's</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#e8c7d4] text-[#255339] font-sans">
+
+  <!-- Navigatie -->
+<!-- Navigatie -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+    <!-- Brand: logo + tekst -->
+    <a href="index.html" class="flex items-center gap-3">
+      <img
+        src="logo_wit.png"
+        alt="Belle.by.Kato logo"
+        class="h-10 w-auto object-contain shrink-0"
+      />
+      <span class="text-xl font-bold text-[#255339] leading-none">
+        Belle.by.Kato
+      </span>
+    </a>
+
+    <!-- Desktopmenu -->
+    <ul class="hidden md:flex items-center gap-6">
+      <li><a href="index.html" class="hover:text-pink-700">Home</a></li>
+      <li><a href="over2.html" class="hover:text-pink-700">Over mij</a></li>
+      <li><a href="impressie.html" class="hover:text-pink-700">Impressiefoto's</a></li>
+      <li><a href="tarieven.html" class="hover:text-pink-700">Prijslijst</a></li>
+      <li><a href="boeken.html" class="hover:text-pink-700">Online boeken</a></li>
+    </ul>
+
+    <!-- Hamburgerknop (alleen op gsm) -->
+    <button id="menuBtn"
+      class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#255339] hover:bg-[#e8c7d4]/30 focus:outline-none focus:ring-2 focus:ring-[#255339]"
+      aria-controls="mobileMenu" aria-expanded="false">
+      <!-- Open-icoon (3 streepjes) -->
+      <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <!-- Sluit-icoon (X) -->
+      <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      <span class="sr-only">Menu</span>
+    </button>
+  </div>
+
+  <!-- Mobiele dropdown -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-gray-200 bg-white">
+    <ul class="px-4 py-3 space-y-1">
+      <li><a href="index.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Home</a></li>
+      <li><a href="over2.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Over mij</a></li>
+      <li><a href="impressie.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Impressiefoto's</a></li>
+      <li><a href="tarieven.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Prijslijst</a></li>
+      <li><a href="boeken.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Online boeken</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Simpele toggle voor het mobiele menu
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  const iconOpen = document.getElementById('iconOpen');
+  const iconClose = document.getElementById('iconClose');
+
+  btn.addEventListener('click', () => {
+    const isHidden = menu.classList.contains('hidden');
+    menu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden', !isHidden);
+    iconClose.classList.toggle('hidden', isHidden);
+    btn.setAttribute('aria-expanded', String(isHidden));
+  });
+
+  // Optioneel: sluit het menu wanneer je buiten klikt
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !btn.contains(e.target) && !menu.classList.contains('hidden')) {
+      menu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+
+  <header class="bg-white shadow p-6">
+    <h1 class="text-3xl font-bold text-center">Prijslijst</h1>
+  </header>
