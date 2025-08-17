@@ -93,10 +93,280 @@
 
 
   <header class="bg-white shadow p-6">
-    <h1 class="text-3xl font-bold text-center">Prijslijst - Coming Soon </h1>
+    <h1 class="text-3xl font-bold text-center">Prijslijst</h1>
   </header>
 
 
-</body>
 
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Prijslijst | Belle by Kato</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      margin: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h2 {
+      font-size: 2em;
+      margin-top: 40px;
+      color: #255339;
+    }
+    .treatment {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 10px 0;
+    }
+    .treatment-name {
+      flex: 1;
+    }
+    .price {
+      padding: 5px 10px;
+      margin-left: 10px;
+      min-width: 80px;
+      text-align: center;
+    }
+    .note {
+      font-size: 0.9em;
+      font-style: italic;
+      margin-left: 20px;
+      color: #555;
+      margin-top: -20px;
+      margin-bottom: 10px;
+    }
+
+      
+/* Koprij boven de twee prijs-kolommen */
+    .columns-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 0 12px;
+      /* optioneel een subtiele streep eronder:
+  border-bottom: 1px solid #e0e0e0; */
+    }
+
+    .columns-head .spacer {
+      flex: 1 1 auto;           /* neemt de plaats in van de naam-kolom */
+    }
+
+    .columns-head .col-head {
+      min-width: 80px;          /* <<< match met .price */
+      text-align: center;
+      color: #255339;           /* jouw merk-kleur */
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;                 /* ruimte tussen icoon en label */
+    }
+
+    /* Icoontjes netjes schalen en kleur laten erven */
+    .columns-head svg {
+      width: 26px;
+      height: 26px;
+      margin: 0 auto;
+      display: block;
+      fill: currentColor;       /* neemt #255339 over */
+    }
+
+    /* Mobiel: behoud dezelfde uitlijning als de prijzen */
+    @media (max-width: 640px) {
+      .columns-head {
+       padding-bottom: 8px;
+      }
+      .columns-head .col-head {
+        min-width: 80px;        /* houdt ze naast elkaar onder de titel */
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+    }
+   
+      .info-block {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem 0; /* zorgt voor ruimte boven en onder */
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+        color: #333;
+      }
+
+
+
+   
+  </style>
+</head>
+<body>
+
+        <!-- Info blok boven MANICURE -->
+    <div class="info-block">
+      <div class="info-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+        </svg>
+        <span>Behandeling in de praktijkruimte</span>
+      </div>
+
+      <div class="info-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        <span>Behandeling aan huis</span>
+      </div>
+    </div>
+  <div class="container">
+    <h2>Manicure</h2>
+
+    <!-- Koprij voor MANICURE -->
+    <div class="columns-head" aria-hidden="false">
+      <div class="spacer"></div>
+
+      <!-- Ter plaatse -->
+      <div class="col-head" title="Ter plaatse">
+        <!-- Google Maps pin icoon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+        </svg>
+      </div>
+
+      <!-- Op verplaatsing -->
+      <div class="col-head" title="Op verplaatsing">
+        <!-- Huis icoon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+      </div>
+    </div>
+
+
+    
+            <div class="treatment">
+                <div class="treatment-name">Basismanicure</div>
+                <div class="price">€25</div>
+                <div class="price">€30</div>
+            </div>
+            
+            <div class="treatment">
+                <div class="treatment-name">Afhalen Gellak | BIAB | Gel</div>
+                <div class="price">€20</div>
+                <div class="price">€25</div>
+            </div>
+            
+            <div class="treatment">
+                <div class="treatment-name">Afhalen set ander salon</div>
+                <div class="price">€25</div>
+                <div class="price">€30</div>
+            </div>
+            
+            <div class="treatment">
+                <div class="treatment-name">Nieuwe set Gellak</div>
+                <div class="price">€45</div>
+                <div class="price">€55</div>
+            </div>
+            
+            <div class="treatment">
+                <div class="treatment-name">Afhalen + nieuwe set Gellak</div>
+                <div class="price">€50</div>
+                <div class="price">€60</div>
+            </div>
+            
+            <div class="treatment">
+                <div class="treatment-name">Nieuwe set BIAB | Gel</div>
+                <div class="price">€65</div>
+                <div class="price">€75</div>
+            </div>
+            
+            <div class="treatment">
+                <div class="treatment-name">Supplement French</div>
+                <div class="price">+€5</div>
+                <div class="price">+€5</div>
+            </div>
+            
+            <div class="treatment">
+                <div class="treatment-name">Supplement verlening per nagel</div>
+                <div class="price">+€2</div>
+                <div class="price">+€2</div>
+            </div>
+
+          
+            
+
+    <h2>Pedicure</h2>
+
+        <!-- Koprij voor MANICURE -->
+    <div class="columns-head" aria-hidden="false">
+      <div class="spacer"></div>
+
+      <!-- Ter plaatse -->
+      <div class="col-head" title="Ter plaatse">
+        <!-- Google Maps pin icoon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+        </svg>
+      </div>
+
+      <!-- Op verplaatsing -->
+      <div class="col-head" title="Op verplaatsing">
+        <!-- Huis icoon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+      </div>
+    </div>
+    
+            <div class="treatment">
+                <div class="treatment-name">Basispedicure</div>
+                <div class="price">€35</div>
+                <div class="price">€40</div>
+            </div>
+            
+            <div class="treatment">
+                <div class="treatment-name">Supplement Gellak</div>
+                <div class="price">+€20</div>
+                <div class="price">+€20</div>
+            </div>
+            
+            <div class="treatment">
+                <div class="treatment-name">Supplement Aandoening</div>
+                <div class="price">+€5</div>
+                <div class="price">+€5</div>
+            </div>
+            <div class="note">Ingegroeide nagel | Eksteroog | Overmatige eeltgroei</div>
+
+  </div>
+
+    <!-- Footer -->
+  <footer class="bg-white text-center p-6 mt-10 text-sm text-gray-700">
+    <p>📍 Lindenstraat 4, 8800 Roeselare | 📞 0483 19 13 28 | ✉️ bellebykato@outlook.be</p>
+    <p> BTW: BE1012596163 | IBAN: BE05652828127175</p>
+  </footer>
+
+</body>
 </html>
+
+
+
+
+
+
+
+
