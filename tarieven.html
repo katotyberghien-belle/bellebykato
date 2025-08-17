@@ -1,70 +1,58 @@
 <!DOCTYPE html>
+
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Belle - Impressiefoto's</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Belle - Impressiefoto's</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#e8c7d4] text-[#255339] font-sans">
-
-  <!-- Navigatie -->
+<!-- Navigatie -->
 <!-- Navigatie -->
 <nav class="bg-white shadow-md sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-    <!-- Brand: logo + tekst -->
-    <a href="index.html" class="flex items-center gap-3">
-      <img
-        src="logo_wit.png"
-        alt="Belle.by.Kato logo"
-        class="h-10 w-auto object-contain shrink-0"
-      />
-      <span class="text-xl font-bold text-[#255339] leading-none">
+<div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+<!-- Brand: logo + tekst -->
+<a class="flex items-center gap-3" href="index.html">
+<img alt="Belle.by.Kato logo" class="h-10 w-auto object-contain shrink-0" src="logo_wit.png"/>
+<span class="text-xl font-bold text-[#255339] leading-none">
         Belle.by.Kato
       </span>
-    </a>
-
-    <!-- Desktopmenu -->
-    <ul class="hidden md:flex items-center gap-6">
-      <li><a href="index.html" class="hover:text-pink-700">Home</a></li>
-      <li><a href="over2.html" class="hover:text-pink-700">Over mij</a></li>
-      <li><a href="impressie.html" class="hover:text-pink-700">Impressiefoto's</a></li>
-      <li><a href="tarieven.html" class="hover:text-pink-700">Prijslijst</a></li>
-      <li><a href="boeken.html" class="hover:text-pink-700">Online boeken</a></li>
-    </ul>
-
-    <!-- Hamburgerknop (alleen op gsm) -->
-    <button id="menuBtn"
-      class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#255339] hover:bg-[#e8c7d4]/30 focus:outline-none focus:ring-2 focus:ring-[#255339]"
-      aria-controls="mobileMenu" aria-expanded="false">
-      <!-- Open-icoon (3 streepjes) -->
-      <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      <!-- Sluit-icoon (X) -->
-      <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none"
-        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M6 18L18 6M6 6l12 12" />
-      </svg>
-      <span class="sr-only">Menu</span>
-    </button>
-  </div>
-
-  <!-- Mobiele dropdown -->
-  <div id="mobileMenu" class="md:hidden hidden border-t border-gray-200 bg-white">
-    <ul class="px-4 py-3 space-y-1">
-      <li><a href="index.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Home</a></li>
-      <li><a href="over2.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Over mij</a></li>
-      <li><a href="impressie.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Impressiefoto's</a></li>
-      <li><a href="tarieven.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Prijslijst</a></li>
-      <li><a href="boeken.html" class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]">Online boeken</a></li>
-    </ul>
-  </div>
+</a>
+<!-- Desktopmenu -->
+<ul class="hidden md:flex items-center gap-6">
+<li><a class="hover:text-pink-700" href="index.html">Home</a></li>
+<li><a class="hover:text-pink-700" href="over2.html">Over mij</a></li>
+<li><a class="hover:text-pink-700" href="impressie.html">Impressiefoto's</a></li>
+<li><a class="hover:text-pink-700" href="tarieven.html">Prijslijst</a></li>
+<li><a class="hover:text-pink-700" href="boeken.html">Online boeken</a></li>
+<li><a class="hover:text-pink-700" href="contact.html">Contact</a></li>
+</ul>
+<!-- Hamburgerknop (alleen op gsm) -->
+<button aria-controls="mobileMenu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#255339] hover:bg-[#e8c7d4]/30 focus:outline-none focus:ring-2 focus:ring-[#255339]" id="menuBtn">
+<!-- Open-icoon (3 streepjes) -->
+<svg class="h-6 w-6" fill="none" id="iconOpen" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<!-- Sluit-icoon (X) -->
+<svg class="hidden h-6 w-6" fill="none" id="iconClose" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="sr-only">Menu</span>
+</button>
+</div>
+<!-- Mobiele dropdown -->
+<div class="md:hidden hidden border-t border-gray-200 bg-white" id="mobileMenu">
+<ul class="px-4 py-3 space-y-1">
+<li><a class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]" href="index.html">Home</a></li>
+<li><a class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]" href="over2.html">Over mij</a></li>
+<li><a class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]" href="impressie.html">Impressiefoto's</a></li>
+<li><a class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]" href="tarieven.html">Prijslijst</a></li>
+<li><a class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]" href="boeken.html">Online boeken</a></li>
+<li><a class="block px-3 py-2 rounded-md hover:bg-[#e8c7d4]/40 text-[#255339]" href="contact.html">Contact</a></li>
+</ul>
+</div>
 </nav>
-
 <script>
   // Simpele toggle voor het mobiele menu
   const btn = document.getElementById('menuBtn');
@@ -90,21 +78,16 @@
     }
   });
 </script>
-
-
-  <header class="bg-white shadow p-6">
-    <h1 class="text-3xl font-bold text-center">Prijslijst</h1>
-  </header>
-
-
-
-
+<header class="bg-white shadow p-6">
+<h1 class="text-3xl font-bold text-center">Prijslijst</h1>
+</header>
 <!DOCTYPE html>
+
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>Prijslijst | Belle by Kato</title>
-  <style>
+<meta charset="utf-8"/>
+<title>Prijslijst | Belle by Kato</title>
+<style>
     body {
       font-family: Arial, sans-serif;
       background: #fff;
@@ -216,157 +199,135 @@
   </style>
 </head>
 <body>
+<!-- Info blok boven MANICURE -->
+<div class="info-block">
+<div class="info-item">
+<svg aria-hidden="true" fill="currentColor" height="24" role="img" viewbox="0 0 24 24" width="24">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"></path>
+</svg>
+<span>Behandeling in de praktijkruimte</span>
+</div>
+<div class="info-item">
+<svg aria-hidden="true" fill="currentColor" height="24" role="img" viewbox="0 0 24 24" width="24">
+<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+</svg>
+<span>Behandeling aan huis*</span>
+</div>
+</div>
+<div class="container">
+<h2>Manicure</h2>
+<!-- Koprij voor MANICURE -->
+<div aria-hidden="false" class="columns-head">
+<div class="spacer"></div>
+<!-- Ter plaatse -->
+<div class="col-head" title="Ter plaatse">
+<!-- Google Maps pin icoon -->
+<svg aria-hidden="true" fill="currentColor" height="24" role="img" viewbox="0 0 24 24" width="24">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"></path>
+</svg>
+</div>
+<!-- Op verplaatsing -->
+<div class="col-head" title="Op verplaatsing">
+<!-- Huis icoon -->
+<svg aria-hidden="true" fill="currentColor" height="24" role="img" viewbox="0 0 24 24" width="24">
+<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+</svg>
+</div>
+</div>
+<div class="treatment">
+<div class="treatment-name">Basismanicure</div>
+<div class="price">€25</div>
+<div class="price">€30</div>
+</div>
+<div class="treatment">
+<div class="treatment-name">Afhalen Gellak | BIAB | Gel</div>
+<div class="price">€20</div>
+<div class="price">€25</div>
+</div>
+<div class="treatment">
+<div class="treatment-name">Afhalen set ander salon</div>
+<div class="price">€25</div>
+<div class="price">€30</div>
+</div>
+<div class="treatment">
+<div class="treatment-name">Nieuwe set Gellak</div>
+<div class="price">€45</div>
+<div class="price">€55</div>
+</div>
+<div class="treatment">
+<div class="treatment-name">Afhalen + nieuwe set Gellak</div>
+<div class="price">€50</div>
+<div class="price">€60</div>
+</div>
+<div class="treatment">
+<div class="treatment-name">Nieuwe set BIAB | Gel</div>
+<div class="price">€65</div>
+<div class="price">€75</div>
+</div>
+<div class="treatment">
+<div class="treatment-name">Supplement French</div>
+<div class="price">+€5</div>
+<div class="price">+€5</div>
+</div>
+<div class="treatment">
+<div class="treatment-name">Supplement verlening per nagel</div>
+<div class="price">+€2</div>
+<div class="price">+€2</div>
+</div>
+<h2>Pedicure</h2>
+<!-- Koprij voor MANICURE -->
+<div aria-hidden="false" class="columns-head">
+<div class="spacer"></div>
+<!-- Ter plaatse -->
+<div class="col-head" title="Ter plaatse">
+<!-- Google Maps pin icoon -->
+<svg aria-hidden="true" fill="currentColor" height="24" role="img" viewbox="0 0 24 24" width="24">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"></path>
+</svg>
+</div>
+<!-- Op verplaatsing -->
+<div class="col-head" title="Op verplaatsing">
+<!-- Huis icoon -->
+<svg aria-hidden="true" fill="currentColor" height="24" role="img" viewbox="0 0 24 24" width="24">
+<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+</svg>
+</div>
+</div>
+<div class="treatment">
+<div class="treatment-name">Basispedicure</div>
+<div class="price">€35</div>
+<div class="price">€40</div>
+</div>
+<div class="treatment">
+<div class="treatment-name">Supplement Gellak</div>
+<div class="price">+€20</div>
+<div class="price">+€20</div>
+</div>
+<div class="treatment">
+<div class="treatment-name">Supplement Aandoening</div>
+<div class="price">+€5</div>
+<div class="price">+€5</div>
+</div>
+<div class="note">Ingegroeide nagel | Eksteroog | Overmatige eeltgroei</div>
+</div>
+<!-- Footer -->
+<p style="font-size: 0.8rem; color: #555; text-align: center; margin-top: 2rem;">* Supplement grote afstand mogelijk </p><footer class="bg-white text-center p-6 mt-10 text-sm text-gray-700">
+<p>📍 Lindenstraat 4, 8800 Roeselare | 📞 0483 19 13 28 | ✉️ bellebykato@outlook.be</p>
+<p> BTW: BE1012596163 | IBAN: BE05652828127175</p>
+</footer>
 
-        <!-- Info blok boven MANICURE -->
-    <div class="info-block">
-      <div class="info-item">
-        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
-        </svg>
-        <span>Behandeling in de praktijkruimte</span>
-      </div>
+<!-- WhatsApp zwevende knop -->
+<a href="https://wa.me/32483191328" target="_blank"
+   class="fixed bottom-6 right-1">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              alt="WhatsApp"
+             class="w-10 h-10 mx-auto hover:scale-110 transition duration-200">
 
-      <div class="info-item">
-        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
-          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
-        <span>Behandeling aan huis</span>
-      </div>
-    </div>
-  <div class="container">
-    <h2>Manicure</h2>
+<!-- WhatsApp zwevende knop -->
+<a href="https://wa.me/32483191328" target="_blank"
+   class="fixed bottom-6 right-1">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              alt="WhatsApp"
+             class="w-10 h-10 mx-auto hover:scale-110 transition duration-200">
 
-    <!-- Koprij voor MANICURE -->
-    <div class="columns-head" aria-hidden="false">
-      <div class="spacer"></div>
-
-      <!-- Ter plaatse -->
-      <div class="col-head" title="Ter plaatse">
-        <!-- Google Maps pin icoon -->
-        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
-        </svg>
-      </div>
-
-      <!-- Op verplaatsing -->
-      <div class="col-head" title="Op verplaatsing">
-        <!-- Huis icoon -->
-        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
-          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
-      </div>
-    </div>
-
-
-    
-            <div class="treatment">
-                <div class="treatment-name">Basismanicure</div>
-                <div class="price">€25</div>
-                <div class="price">€30</div>
-            </div>
-            
-            <div class="treatment">
-                <div class="treatment-name">Afhalen Gellak | BIAB | Gel</div>
-                <div class="price">€20</div>
-                <div class="price">€25</div>
-            </div>
-            
-            <div class="treatment">
-                <div class="treatment-name">Afhalen set ander salon</div>
-                <div class="price">€25</div>
-                <div class="price">€30</div>
-            </div>
-            
-            <div class="treatment">
-                <div class="treatment-name">Nieuwe set Gellak</div>
-                <div class="price">€45</div>
-                <div class="price">€55</div>
-            </div>
-            
-            <div class="treatment">
-                <div class="treatment-name">Afhalen + nieuwe set Gellak</div>
-                <div class="price">€50</div>
-                <div class="price">€60</div>
-            </div>
-            
-            <div class="treatment">
-                <div class="treatment-name">Nieuwe set BIAB | Gel</div>
-                <div class="price">€65</div>
-                <div class="price">€75</div>
-            </div>
-            
-            <div class="treatment">
-                <div class="treatment-name">Supplement French</div>
-                <div class="price">+€5</div>
-                <div class="price">+€5</div>
-            </div>
-            
-            <div class="treatment">
-                <div class="treatment-name">Supplement verlening per nagel</div>
-                <div class="price">+€2</div>
-                <div class="price">+€2</div>
-            </div>
-
-          
-            
-
-    <h2>Pedicure</h2>
-
-        <!-- Koprij voor MANICURE -->
-    <div class="columns-head" aria-hidden="false">
-      <div class="spacer"></div>
-
-      <!-- Ter plaatse -->
-      <div class="col-head" title="Ter plaatse">
-        <!-- Google Maps pin icoon -->
-        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
-        </svg>
-      </div>
-
-      <!-- Op verplaatsing -->
-      <div class="col-head" title="Op verplaatsing">
-        <!-- Huis icoon -->
-        <svg viewBox="0 0 24 24" aria-hidden="true" role="img" width="24" height="24" fill="currentColor">
-          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
-      </div>
-    </div>
-    
-            <div class="treatment">
-                <div class="treatment-name">Basispedicure</div>
-                <div class="price">€35</div>
-                <div class="price">€40</div>
-            </div>
-            
-            <div class="treatment">
-                <div class="treatment-name">Supplement Gellak</div>
-                <div class="price">+€20</div>
-                <div class="price">+€20</div>
-            </div>
-            
-            <div class="treatment">
-                <div class="treatment-name">Supplement Aandoening</div>
-                <div class="price">+€5</div>
-                <div class="price">+€5</div>
-            </div>
-            <div class="note">Ingegroeide nagel | Eksteroog | Overmatige eeltgroei</div>
-
-  </div>
-
-    <!-- Footer -->
-  <footer class="bg-white text-center p-6 mt-10 text-sm text-gray-700">
-    <p>📍 Lindenstraat 4, 8800 Roeselare | 📞 0483 19 13 28 | ✉️ bellebykato@outlook.be</p>
-    <p> BTW: BE1012596163 | IBAN: BE05652828127175</p>
-  </footer>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
+</body></html>
